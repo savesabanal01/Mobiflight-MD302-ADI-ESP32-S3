@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ModuleType>MD302_ADI_ESP32-S3</ModuleType>
+  <ModuleName>MD302 ADI ESP32-S3</ModuleName>
+  <PowerSavingTime>600</PowerSavingTime>
+  <CustomDevice Name="MD320 ADI ESP32-S3" CustomType="MD302_ADI" Pins="" Config="">
+    <ConfiguredPins>
+      <string>1</string>
+      <string>2</string>
+      <string>3</string>
+    </ConfiguredPins>
+  </CustomDevice>
+</Config>

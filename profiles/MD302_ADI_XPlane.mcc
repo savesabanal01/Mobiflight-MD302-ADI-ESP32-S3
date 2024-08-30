@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MobiflightConnector>
+  <outputs>
+    <config guid="85fd8b21-0bcf-4c88-a165-94506c6ae922">
+      <active>true</active>
+      <description>Pitch</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="XplaneDataRef" path="sim/cockpit2/gauges/indicators/pitch_AHARS_deg_pilot" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="MD302 ADI ESP32-S3/ SN-24587CDE6C94" trigger="normal" customType="" customName="MD320 ADI ESP32-S3" messageType="0" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="9732c695-053c-4b21-81f1-8f4fffa19c92">
+      <active>true</active>
+      <description>Roll</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="XplaneDataRef" path="sim/cockpit2/gauges/indicators/roll_AHARS_deg_pilot" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="MD302 ADI ESP32-S3/ SN-24587CDE6C94" trigger="normal" customType="" customName="MD320 ADI ESP32-S3" messageType="1" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="58e53a71-7eee-4b05-9529-d99e43340634">
+      <active>true</active>
+      <description>Slip Degree</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="XplaneDataRef" path="sim/cockpit2/gauges/indicators/slip_deg" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="MD302 ADI ESP32-S3/ SN-24587CDE6C94" trigger="normal" customType="" customName="MD320 ADI ESP32-S3" messageType="2" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="12b8d96b-2ffd-42ba-a1bf-70180cf318a0">
+      <active>true</active>
+      <description>Instrument Brightness</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="XplaneDataRef" path="sim/cockpit2/electrical/instrument_brightness_ratio_manual[1]" />
+        <test type="Float" value="1" />
+        <modifiers />
+        <display type="CustomDevice" serial="MD302 ADI ESP32-S3/ SN-24587CDE6C94" trigger="normal" customType="" customName="MD320 ADI ESP32-S3" messageType="3" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+    <config guid="5fc94df7-2f67-41f6-891b-dd747ebc6619">
+      <active>true</active>
+      <description>Screen Rotation</description>
+      <settings msdata:InstanceType="MobiFlight.OutputConfigItem, MFConnector, Version=10.3.0.0, Culture=neutral, PublicKeyToken=null" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <source type="Variable" varType="number" varName="ScreenRotation" varExpression="$" />
+        <test type="Float" value="1" />
+        <modifiers>
+          <transformation active="True" expression="2" />
+        </modifiers>
+        <display type="CustomDevice" serial="MD302 ADI ESP32-S3/ SN-24587CDE6C94" trigger="normal" customType="" customName="MD320 ADI ESP32-S3" messageType="100" value="$" />
+        <preconditions />
+        <configrefs />
+      </settings>
+    </config>
+  </outputs>
+  <inputs />
+</MobiflightConnector>
