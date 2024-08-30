@@ -170,12 +170,6 @@ void MD302_ADI::update()
 {
 
     // Do something which is required regulary
-  // Angles are reversed from the sim so we multiply by -1.0
-  
-  pitch = pitch * -1.0;
-  roll = roll * -1.0;
-
-    // Do something which is required regulary
   if(!powerSaveFlag)
   {
     analogWrite(TFT_BL, instrumentBrightness);
@@ -394,12 +388,12 @@ void MD302_ADI::setPitch(float value)
 
 void MD302_ADI::setRoll(float value)
 {
-  roll = value;
+  roll = value * -1.0;
 }
 
 void MD302_ADI::setSlipAngle(float value)
 {
-  slipAngle = value;
+  slipAngle = value * -1.0;
 }
 
 void MD302_ADI::setInstrumentBrightnessRatio(float value)
