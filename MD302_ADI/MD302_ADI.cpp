@@ -168,9 +168,29 @@ void MD302_ADI::set(int16_t messageID, char *setPoint)
 
 void MD302_ADI::update()
 {
+
     // Do something which is required regulary
+  // Angles are reversed from the sim
+
+  pitch = pitch * -1.0;
+  roll = roll * -1.0;
+  
+  if(!powerSaveMode)
+  {
+    if(prevScreenRotation != screenRotation)
+    {
+      if(screenRotation == 0 || screenRotation == 2) 
+      {
+        prevScreenRotation = screenRotation;
+        tft.setRotation(screenRotation);
+      }
     analogWrite(TFT_BL, instrumentBrightness);
     drawAttitudeIndicator();
+    }
+    else {
+      digitalWrite(TFT_BL, LOW);
+    }
+  }
 
 }
 
