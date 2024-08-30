@@ -25,7 +25,7 @@ private:
     int instrumentBrightness = 255;
     int screenRotation = 2;
     int prevScreenRotation = 2;
-    bool powerSaveMode = false;
+    bool powerSaveFlag = false;
 
     // Function declarations
     float scaleValue(float x, float in_min, float in_max, float out_min, float out_max);

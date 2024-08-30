@@ -171,26 +171,18 @@ void MD302_ADI::update()
 
     // Do something which is required regulary
   // Angles are reversed from the sim
-
-  pitch = pitch * -1.0;
-  roll = roll * -1.0;
-  
-  if(!powerSaveMode)
+    // Do something which is required regulary
+  if(!powerSaveFlag)
   {
+    analogWrite(TFT_BL, instrumentBrightness);
     if(prevScreenRotation != screenRotation)
     {
-      if(screenRotation == 0 || screenRotation == 2) 
-      {
-        prevScreenRotation = screenRotation;
         tft.setRotation(screenRotation);
-      }
-    analogWrite(TFT_BL, instrumentBrightness);
+        prevScreenRotation = screenRotation;
+    }
     drawAttitudeIndicator();
-    }
-    else {
-      digitalWrite(TFT_BL, LOW);
-    }
-  }
+   }
+   else digitalWrite(TFT_BL, LOW);
 
 }
 
@@ -417,11 +409,18 @@ void MD302_ADI::setScreenRotation(int value)
   screenRotation = value;
 }
 
-void MD302_ADI::setPowerSaveMode(bool mode)
+void MD302_ADI::setPowerSaveMode(bool enabled)
 {
-
-  powerSaveMode = mode;
-
+    if(enabled)
+    {
+        digitalWrite(TFT_BL, LOW);
+        powerSaveFlag = true;
+    }
+    else
+    {
+        analogWrite(TFT_BL, instrumentBrightness);
+        powerSaveFlag = false;
+    }
 }
 
 // Scale function
