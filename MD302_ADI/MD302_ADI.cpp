@@ -170,7 +170,11 @@ void MD302_ADI::update()
 {
 
     // Do something which is required regulary
-  // Angles are reversed from the sim
+  // Angles are reversed from the sim so we multiply by -1.0
+  
+  pitch = pitch * -1.0;
+  roll = roll * -1.0;
+
     // Do something which is required regulary
   if(!powerSaveFlag)
   {
