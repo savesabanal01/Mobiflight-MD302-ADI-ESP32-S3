@@ -170,17 +170,25 @@ void MD302_ADI::update()
 {
 
     // Do something which is required regulary
-  if(!powerSaveFlag)
-  {
-    analogWrite(TFT_BL, instrumentBrightness);
-    if(prevScreenRotation != screenRotation)
+  // if(!powerSaveFlag)
+  // {
+  //   analogWrite(TFT_BL, instrumentBrightness);
+  //   if(prevScreenRotation != screenRotation)
+  //   {
+  //       tft.setRotation(screenRotation);
+  //       prevScreenRotation = screenRotation;
+  //   }
+  //   drawAttitudeIndicator();
+  //  }
+  //  else digitalWrite(TFT_BL, LOW);
+  
+   analogWrite(TFT_BL, instrumentBrightness);
+   if(prevScreenRotation != screenRotation)
     {
         tft.setRotation(screenRotation);
         prevScreenRotation = screenRotation;
     }
-    drawAttitudeIndicator();
-   }
-   else digitalWrite(TFT_BL, LOW);
+   drawAttitudeIndicator();
 
 }
 
