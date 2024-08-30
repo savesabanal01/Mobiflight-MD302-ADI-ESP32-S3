@@ -1,0 +1,46 @@
+{
+    "$schema": "./mfdevice.schema.json",
+    "Info": {
+      "Label": "MD320 ADI ESP32-S3",
+      "Type": "MD302_ADI",
+      "Author": "Save Sabanal",
+      "URL": "https://github.com/savesabanal01/",
+      "Version" : "1.0.0"
+    },
+    "Config": {
+      "Pins": [
+        "Pin 1",
+        "Pin 2",
+        "Pin 3"
+      ],
+      "isI2C": false
+    },
+    "MessageTypes": [
+      {
+        "id": 0,
+        "label": "Show Pitch Value",
+        "description": "$ will be displayed as Pitch value"
+      },
+      {
+        "id": 1,
+        "label": "Show Roll Value",
+        "description": "$ will be displayed as Roll value"
+      },
+      {
+        "id": 2,
+        "label": "Show Slip Angle value",
+        "description": "$ will be displayed as Slip Angle value"
+      },
+      {
+        "id": 3,
+        "label": "Instrument Brigthness value",
+        "description": "$ will be displayed as Instrument Brightness value"
+      },
+      {
+        "id": 100,
+        "label": "LCD Display Orientation",
+        "description": "0 = Portrait, 1 = Landscape, 2 = Portrait (flipped), 3 = Landscape (flipped)"
+      }
+    ]
+  }
+  
